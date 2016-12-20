@@ -1,0 +1,524 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\exe.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\exe.ico"
+IDI_FILTER_DLG          ICON                    "res\\icon1.ico"
+IDI_APP_DLG             ICON                    "res\\icon2.ico"
+IDI_LOG_DLG             ICON                    "res\\ico00001.ico"
+IDI_SEARCH_LOG          ICON                    "res\\ico00002.ico"
+IDI_CONFIG_DLG          ICON                    "res\\icon3.ico"
+IDI_ACTION_PASS         ICON                    "res\\ico00003.ico"
+IDI_ACTION_DENY         ICON                    "res\\ico00004.ico"
+IDI_ACTION_CONTINUE     ICON                    "res\\ico00005.ico"
+IDI_ABOUT_DLG           ICON                    "res\\ico00006.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 PFW 个人防火墙"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PFW 个人防火墙毕业设计版(Ver 0.1)",IDC_STATIC,40,10,119,
+                    8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+    LTEXT           "作者：秦丰林",IDC_STATIC,40,40,42,8
+END
+
+IDD_MAIN_DIALOG DIALOGEX 0, 0, 365, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PFW 个人防火墙"
+MENU IDR_MAINMENU
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_DLG_CTRL,58,7,300,225
+    CONTROL         "",IDC_DLG_LIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_NOSCROLL | WS_TABSTOP,7,7,45,225,WS_EX_TRANSPARENT | 
+                    WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,0,365,1
+END
+
+IDD_FILTER_DIALOG DIALOGEX 0, 0, 300, 225
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "上移(&U)",IDC_CMD_FILTER_MOVEUP,6,24,50,14
+    PUSHBUTTON      "下移(&D)",IDC_CMD_FILTER_MOVE_DOWN,60,24,50,14
+    PUSHBUTTON      "插入(&I)",IDC_CMD_FILTER_INSERT,138,24,50,14
+    PUSHBUTTON      "删除(&R)",IDC_CMD_FILTER_DELETE,192,24,50,14
+    DEFPUSHBUTTON   "属性(&P)",IDC_CMD_FILTER_MODIFY,246,24,50,14
+    CONTROL         "",IDC_FILTER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,0,42,300,183
+    ICON            IDI_FILTER_DLG,IDC_STATIC,8,0,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,20,299,1
+    LTEXT           "过滤规则设置",IDC_STATIC,40,4,42,8
+END
+
+IDD_APP_DIALOG DIALOGEX 0, 0, 300, 225
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "删除(&D)",IDC_CMD_DELETE_APP,192,24,50,14
+    DEFPUSHBUTTON   "属性(&P)",IDC_CMD_MODIFY_APP,246,24,50,14
+    CONTROL         "",IDC_APP_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,0,42,299,183
+    ICON            IDI_APP_DLG,IDC_STATIC,8,0,20,20
+    LTEXT           "应用程序访问网络权限设置",IDC_STATIC,40,4,83,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,20,300,1
+END
+
+IDD_LOG_DIALOG DIALOGEX 0, 0, 300, 225
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "保存(&S)",IDC_CMD_SAVE_LOG,6,24,50,14
+    PUSHBUTTON      "清除(&C)",IDC_CMD_CLEAR_LOG,138,24,50,14
+    PUSHBUTTON      "停止监视(&M)",IDC_CMD_MONITOR_LOG,192,24,50,14
+    PUSHBUTTON      "停止滚动(&R)",IDC_CMD_SCROLL_LOG,246,24,50,14
+    CONTROL         "",IDC_LOG_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,0,42,299,183
+    LTEXT           "数据包监视",IDC_STATIC,40,4,35,8
+    ICON            IDI_LOG_DLG,IDC_STATIC,8,0,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,20,299,1
+END
+
+IDD_CONFIG_DIALOG DIALOGEX 0, 0, 300, 225
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "Tahoma", 400, 0, 0x0
+BEGIN
+    LTEXT           "系统参数设置",IDC_STATIC,40,4,42,8
+    ICON            IDI_CONFIG_DLG,IDC_STATIC,8,0,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,20,299,1
+    CONTROL         "开机时启动防火墙",IDC_CHECK_AUTO_START,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,42,71,10
+    PUSHBUTTON      "设置(&S)",IDC_CMD_APPLY_CONFIG,234,60,50,14
+    PUSHBUTTON      "重设(&R)",IDC_CMD_RESTORE_CONFIG,234,36,50,14
+    CONTROL         "启动后隐藏主窗口",IDC_CHECK_HIDE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,66,71,10
+END
+
+IDD_FIND_DIALOG DIALOGEX 0, 0, 301, 225
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "Tahoma", 700, 0, 0x0
+BEGIN
+    LTEXT           "search",IDC_STATIC,40,4,23,8
+    ICON            IDI_SEARCH_LOG,IDC_STATIC,8,0,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,20,301,1
+END
+
+IDD_APPRULE_INFO DIALOGEX 0, 0, 277, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "应用程序访问网络规则"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "允许通过 TCP 协议接收数据",IDC_CHECK_TCPIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,52,115,10
+    CONTROL         "允许通过 TCP 协议发送数据",IDC_CHECK_TCPOUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,70,113,10
+    CONTROL         "允许通过 UDP 协议接收数据",IDC_CHECK_UDPIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,144,52,113,10
+    CONTROL         "允许通过 UDP 协议发送数据",IDC_CHECK_UDPOUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,144,70,113,10
+    CONTROL         "范围",IDC_RADIO_TCP_RANGE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,18,115,32,10
+    CONTROL         "列表",IDC_RADIO_TCP_LIST,"Button",BS_AUTORADIOBUTTON,78,
+                    115,32,10
+    EDITTEXT        IDC_EDIT_TCP_PORT1,18,132,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TCP_PORT2,18,154,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TCP_PORTS,78,132,40,36,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    CONTROL         "范围",IDC_RADIO_UDP_RANGE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,156,115,32,10
+    CONTROL         "列表",IDC_RADIO_UDP_LIST,"Button",BS_AUTORADIOBUTTON,
+                    216,115,32,10
+    EDITTEXT        IDC_EDIT_UDP_PORT1,156,133,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_UDP_PORT2,156,155,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_UDP_PORTS,216,133,40,36,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    CONTROL         "记录日志",IDC_CHECK_LOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,24,202,48,10
+    CONTROL         "气球提示",IDC_CHECK_FLASH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,202,48,10
+    CONTROL         "发声报警",IDC_CHECK_BEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,174,202,48,10
+    DEFPUSHBUTTON   "确定",IDOK,160,232,50,14
+    PUSHBUTTON      "取消",IDCANCEL,220,232,50,14
+    LTEXT           "程序要访问网络必须符合下列条件：",IDC_STATIC,54,21,216,
+                    8
+    GROUPBOX        "可用服务",IDC_STATIC,7,36,263,58,WS_GROUP
+    GROUPBOX        "不满足条件时拒绝连接并",IDC_STATIC,7,184,263,38
+    GROUPBOX        "允许使用的本地 TCP 端口",IDC_STATIC,7,100,126,78,
+                    WS_GROUP
+    GROUPBOX        "允许使用的本地 UDP 端口",IDC_STATIC,145,100,126,78,
+                    WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_APPICON,16,7,20,20
+    LTEXT           "C:\\Program files\\Internet Explorer\\iexplorer.exe (程序名)",
+                    IDC_APPNAME,54,7,216,8
+END
+
+IDD_FILTERRULE_INFO DIALOGEX 0, 0, 311, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "安全规则"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,42,18,252,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DESCRIPTION,42,36,252,30,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL
+    CONTROL         "TCP",IDC_PROTO_TCP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,24,96,29,10
+    CONTROL         "UDP",IDC_PROTO_UDP,"Button",BS_AUTORADIOBUTTON,72,96,29,
+                    10
+    CONTROL         "IP",IDC_PROTO_IP,"Button",BS_AUTORADIOBUTTON,120,96,23,
+                    10
+    CONTROL         "发送",IDC_DIRECT_OUT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,198,96,32,10
+    CONTROL         "接收",IDC_DIRECT_IN,"Button",BS_AUTORADIOBUTTON,246,96,
+                    32,10
+    COMBOBOX        IDC_COMBO_IP_TYPE,49,132,100,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_IPADDRESS_IP,"SysIPAddress32",WS_TABSTOP,49,150,
+                    100,15
+    CONTROL         "",IDC_IPADDRESS_MASK,"SysIPAddress32",WS_TABSTOP,49,168,
+                    100,15
+    EDITTEXT        IDC_EDIT_PORT1,222,138,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT2,222,162,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_ACTION,24,214,84,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "记录日志",IDC_CHECK_RECORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,126,216,42,10
+    CONTROL         "气球提示",IDC_CHECK_FLASH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,186,216,42,10
+    CONTROL         "发声报警",IDC_CHECK_BEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,246,216,48,10
+    DEFPUSHBUTTON   "确定",IDOK,198,246,50,14
+    PUSHBUTTON      "取消",IDCANCEL,254,246,50,14
+    LTEXT           "名称",IDC_STATIC,18,20,17,8
+    LTEXT           "说明",IDC_STATIC,18,38,17,8
+    GROUPBOX        "规则",IDC_STATIC,7,7,297,67
+    GROUPBOX        "对方地址",IDC_STATIC,7,120,161,72
+    LTEXT           "地址",IDC_STATIC_IP,25,150,17,8
+    LTEXT           "掩码",IDC_STATIC_MASK,25,168,17,8
+    LTEXT           "从",IDC_STATIC,204,138,9,8
+    LTEXT           "到",IDC_STATIC,204,162,9,8
+    GROUPBOX        "满足条件时的动作",IDC_STATIC,7,198,297,40
+    LTEXT           "类型",IDC_STATIC,25,132,17,8
+    GROUPBOX        "协议类型",IDC_STATIC,7,84,161,30
+    GROUPBOX        "数据包方向",IDC_STATIC,180,84,124,30
+    GROUPBOX        "端口范围",IDC_PORT_LABEL,180,120,124,72
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,1,0,0
+ PRODUCTVERSION 0,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "秦丰林作品"
+            VALUE "FileDescription", "PFW防火墙主控程序"
+            VALUE "FileVersion", "0,1,0,0"
+            VALUE "InternalName", "pfw.exe"
+            VALUE "LegalCopyright", "Copyright(C)， 作者秦丰林保留所有权利。"
+            VALUE "OriginalFilename", "pfw.exe"
+            VALUE "ProductName", "PFW 个人防火墙"
+            VALUE "ProductVersion", "0,1,0,0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_MAIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 358
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_LOG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_CONFIG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_FIND_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_APPRULE_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_FILTERRULE_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "系统(&S)"
+    BEGIN
+        MENUITEM "封包监视(&L)",                ID_CMD_LOGINFO
+        MENUITEM "日志查询(&S)",                ID_CMD_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_CMD_EXIT
+    END
+    POPUP "设置(&S)"
+    BEGIN
+        MENUITEM "安全规则(&F)",                ID_CMD_FILTERDLG
+        MENUITEM "程序访问规则(&A)",            ID_CMD_APPDLG
+        MENUITEM SEPARATOR
+        MENUITEM "系统设置(&C)",                ID_CMD_CONFIG
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 PFW 个人防火墙(&A)...",  ID_CMD_ABOUT
+    END
+END
+
+IDR_NOTIFYMENU MENU 
+BEGIN
+    POPUP "PopupMenu"
+    BEGIN
+        MENUITEM "还原(&R)",                    ID_CMD_RESTORE
+        MENUITEM "关于 PFW 个人防火墙(&A)...",  ID_CMD_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_CMD_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 exe(&A)..."
+    IDS_FILTERDLG           "过滤规则设置"
+    IDS_APPDLG              "程序访问规则设置"
+    IDS_LOGINFO             "数据包监视"
+    IDS_CONFIG              "系统设置"
+    IDS_LH_APP_NAME         "名称"
+    IDS_LH_APP_PATH         "路径"
+    IDS_FN_APPRULE          "apprules.dat"
+    IDS_MB_SURE_DELETE      "你确定删除吗？"
+    IDS_MB_DELETE_FAILURE   "删除不成功！"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MB_ERROR_INPUT      "输入的数据有误，请认真检查！\n\n可能是端口列表不能为空或含有非法字符等。\n\n"
+    IDS_MB_ERROR_FILEOPEN   "打开文件失败！"
+    IDS_MB_ERROR_INITPFW    "PFW 驱动程序初始化失败！"
+    IDS_LH_LOG_TIME         "时间"
+    IDS_LH_LOG_ACTION       "动作"
+    IDS_LH_LOG_NAME         "程序"
+    IDS_LH_LOG_PROTO        "协议"
+    IDS_LH_LOG_DIRECT       "方向"
+    IDS_LH_LOG_LPORT        "本地端口"
+    IDS_LH_LOG_RIP          "对方 IP"
+    IDS_LH_LOG_RPORT        "对方端口"
+    IDS_FORMAT_TIME         "%H:%M:%S"
+    IDS_ACTION_PASS         "放行"
+    IDS_ACTION_DENY         "拦截"
+    IDS_DIRECT_IN           "<--"
+    IDS_DIRECT_OUT          "-->"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BTNTXT_LOGENABLE    "允许监视(&M)"
+    IDS_BTNTXT_LOGDISABLE   "停止监视(&M)"
+    IDS_BTNTXT_SCROLLENABLE "允许滚动(&R)"
+    IDS_BTNTXT_SCROLLDISABLE "停止滚动(&R)"
+    IDS_OFN_FILTER_LOG      "日志文件 (*.LOG)|*.LOG|所有文件 (*.*)|*.*||"
+    IDS_LH_FILTER_ACTION    "动作"
+    IDS_LH_FILTER_NAME      "名称"
+    IDS_LH_FILTER_DESCRIPTION "说明"
+    IDS_FORMAT_TRAYINFO_DENY "[%s] 监测到 %s 试图非法访问网络，操作被禁止！"
+    IDS_FORMAT_TRAYINFO_PASS "[%s] 监测到 %s 正在访问网络，该操作合法。"
+    IDS_FN_FILTERRULE       "fltrules.dat"
+    IDS_ACTION_CONTINUE     "继续"
+    IDS_ADDR_TYPE_ANY       "任何地址"
+    IDS_ADDR_TYPE_LAN       "局域网地址"
+    IDS_ADDR_TYPE_SPEC      "指定地址"
+    IDS_ADDR_TYPE_NETWORK   "网络地址"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ACTION_CONTINUE_EX  "继续下一条规则"
+    IDS_PORT_RANG_LOCAL     "本地端口范围"
+    IDS_PORT_RANG_REMOTE    "对方端口范围"
+    IDS_REGKEY_AUTORUN      "pfw_autorun"
+    IDS_FN_BEEP             "beep.wav"
+    IDS_ABOUT               "关于 PFW"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\exe.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
